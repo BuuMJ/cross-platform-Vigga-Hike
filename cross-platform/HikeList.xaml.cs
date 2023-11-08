@@ -13,4 +13,8 @@ public partial class HikeList : ContentPage
     {
         Navigation.PushModalAsync(new MainPage(), true);
     }
+    private void notYet(object sender, EventArgs e)
+    {
+        DisplayAlert("Notification", "The feature is currently being updated and developed", "Close");
+    }
 }

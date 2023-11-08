@@ -36,8 +36,8 @@
                                 <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="4" Grid.Column="0" Text="{Binding HikeStartDate, StringFormat='{dd/MM/yyyy}'}"/>
                                 <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="5" Grid.Column="0" Text="{Binding HikeParking}"/>
                                 <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="6" Grid.Column="0" Text="{Binding HikeDesc}"/>
-                                <Button Margin="0,6,0,0" x:Name="btnEditHike" Grid.Row="7" Grid.Column="0" Text="Edit" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="50" FontAttributes="Bold" FontSize="Subtitle" BackgroundColor="#0095ff" TextColor="White"/>
-                                <Button Margin="0,6,0,0" x:Name="btnDeleteHike" Grid.Row="8" Grid.Column="0" Text="Delete" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="50" FontAttributes="Bold" FontSize="Subtitle" BackgroundColor="#FC0404" TextColor="White"/>
+                                <Button Margin="0,6,0,0" Clicked="notYet" x:Name="btnEditHike" Grid.Row="7" Grid.Column="0" Text="Edit" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="50" FontAttributes="Bold" FontSize="Subtitle" BackgroundColor="#0095ff" TextColor="White"/>
+                                <Button Margin="0,6,0,0" Clicked="notYet" x:Name="btnDeleteHike" Grid.Row="8" Grid.Column="0" Text="Delete" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="50" FontAttributes="Bold" FontSize="Subtitle" BackgroundColor="#FC0404" TextColor="White"/>
                             </Grid>
                         </Border>
                     </DataTemplate>

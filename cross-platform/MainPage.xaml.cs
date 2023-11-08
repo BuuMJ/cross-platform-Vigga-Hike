@@ -14,6 +14,7 @@ namespace cross_platform
             InitializeComponent();
             thisApp.HikeList = new ObservableCollection<Hike>();
             db = new SQLiteDatabase();
+            thisApp.HikeList = db.getHikeList();
         }
         private async void addNewHike(object sender, EventArgs e)
         {
@@ -46,7 +47,7 @@ namespace cross_platform
                 await DisplayAlert("Reminder", "Please select the level of difficulty before submitting.", "OK");
                 return;
             }
-            var response = await DisplayAlert("Confirmation", "Do you agree with the above information?", "OK", "Cancle");
+            var response = await DisplayAlert("Confirmation", "Do you agree with the above information?", "Confirm", "Cancle");
             if (response) {
                 Hike hike = new Hike(count++,
                                             this.txtName.Text,
@@ -66,16 +67,13 @@ namespace cross_platform
                 txtLevel.SelectedIndex = -1;
                 txtLength.Text = "";
                 dtpStartDate.Date = DateTime.Today;
+                await Navigation.PushModalAsync(new HikeList(), true);
             }
 
         }
         private void goHikeList(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new HikeList(), true);
-
-        }
-        private void getHikeList(object sender, EventArgs e) { 
-            thisApp.HikeList = db.getHikeList();
         }
     }
 }
