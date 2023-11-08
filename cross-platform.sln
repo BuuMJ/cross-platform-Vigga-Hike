@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cross-platform", "cross-platform\cross-platform.csproj", "{31DBB719-39D1-4C0E-804F-21274DE94E28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31DBB719-39D1-4C0E-804F-21274DE94E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31DBB719-39D1-4C0E-804F-21274DE94E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31DBB719-39D1-4C0E-804F-21274DE94E28}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{31DBB719-39D1-4C0E-804F-21274DE94E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31DBB719-39D1-4C0E-804F-21274DE94E28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31DBB719-39D1-4C0E-804F-21274DE94E28}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72A3D43E-DB8B-4BEE-8C05-75708670CF94}
+	EndGlobalSection
+EndGlobal

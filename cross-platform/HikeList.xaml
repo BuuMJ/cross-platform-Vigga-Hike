@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cross_platform.HikeList"
+             Title="HikeList">
+    <ScrollView HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
+        <VerticalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="12,0,12,0">
+            <Label Text="Hike List" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Title" FontAttributes='Bold' Margin="0,20,0,12"/>
+            <Button Margin="0,0,0,20" x:Name="btnGoAddNew" Clicked="goAddNew" Text="Add New Hike" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" FontAttributes="Bold" FontSize="Subtitle" BackgroundColor="#0095ff" TextColor="White"/>
+            <CollectionView x:Name="collectionView" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="#0095ff" StrokeThickness="1" Margin="0,20,0,20" Padding="12" BackgroundColor="#1B0071BC">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10,10,10,10" />
+                            </Border.StrokeShape>
+                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" FontSize="Title" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Text="{Binding HikeName}"/>
+                                <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="1" Grid.Column="0" Text="{Binding HikeDesti}"/>
+                                <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="2" Grid.Column="0" Text="{Binding HikeLength, StringFormat='{0} Meters'}"/>
+                                <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="3" Grid.Column="0" Text="{Binding HikeLevel}"/>
+                                <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="4" Grid.Column="0" Text="{Binding HikeStartDate, StringFormat='{dd/MM/yyyy}'}"/>
+                                <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="5" Grid.Column="0" Text="{Binding HikeParking}"/>
+                                <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="6" Grid.Row="6" Grid.Column="0" Text="{Binding HikeDesc}"/>
+                                <Button Margin="0,6,0,0" x:Name="btnEditHike" Grid.Row="7" Grid.Column="0" Text="Edit" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="50" FontAttributes="Bold" FontSize="Subtitle" BackgroundColor="#0095ff" TextColor="White"/>
+                                <Button Margin="0,6,0,0" x:Name="btnDeleteHike" Grid.Row="8" Grid.Column="0" Text="Delete" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="50" FontAttributes="Bold" FontSize="Subtitle" BackgroundColor="#FC0404" TextColor="White"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
